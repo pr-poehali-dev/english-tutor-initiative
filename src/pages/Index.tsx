@@ -14,10 +14,45 @@ const NAV_LINKS = [
 
 const SERVICES = [
   {
-    icon: "Globe",
-    title: "Английский язык",
-    desc: "Разговорный, грамматика, подготовка к IELTS и ЕГЭ.",
+    icon: "FileCheck",
+    title: "IELTS и TOEFL",
+    desc: "Подготовка к международным экзаменам с нуля до результата.",
     color: "from-violet-500 to-indigo-500",
+    tag: "Хит",
+  },
+  {
+    icon: "GraduationCap",
+    title: "ЕГЭ, ОГЭ и ВПР",
+    desc: "Авторский ускоренный курс — ученики поступают куда планировали.",
+    color: "from-orange-400 to-pink-500",
+    tag: "",
+  },
+  {
+    icon: "School",
+    title: "Успеваемость в учёбе",
+    desc: "Помогу подтянуть школьный или университетский английский.",
+    color: "from-cyan-400 to-teal-500",
+    tag: "",
+  },
+  {
+    icon: "MessageCircle",
+    title: "Разговорный английский",
+    desc: "Снятие языкового барьера, разговорный интенсив, живая речь.",
+    color: "from-emerald-400 to-green-500",
+    tag: "",
+  },
+  {
+    icon: "Baby",
+    title: "Английский для малышей",
+    desc: "Игровой формат для детей — первые слова и любовь к языку.",
+    color: "from-amber-400 to-orange-500",
+    tag: "",
+  },
+  {
+    icon: "Plane",
+    title: "Туристический английский",
+    desc: "Минимум за минимальный срок — всё необходимое для поездки.",
+    color: "from-rose-400 to-pink-600",
     tag: "",
   },
 ];
@@ -246,13 +281,13 @@ export default function Index() {
               </div>
               <div className="absolute -bottom-6 -right-6 glass px-5 py-4 rounded-2xl shadow-xl">
                 <div className="text-3xl mb-1">🏆</div>
-                <div className="font-semibold text-sm">Лучший репетитор</div>
-                <div className="text-xs text-foreground/50 font-golos">2023 года</div>
+                <div className="font-semibold text-sm">CAE Cambridge</div>
+                <div className="text-xs text-foreground/50 font-golos">оценка A, 2012 год</div>
               </div>
               <div className="absolute -top-6 -left-6 glass px-5 py-4 rounded-2xl shadow-xl">
                 <div className="text-3xl mb-1">🎓</div>
-                <div className="font-semibold text-sm">МГУ, педагог</div>
-                <div className="text-xs text-foreground/50 font-golos">высшее образование</div>
+                <div className="font-semibold text-sm">Лингвист-переводчик</div>
+                <div className="text-xs text-foreground/50 font-golos">2 высших образования</div>
               </div>
             </div>
           </div>
@@ -266,19 +301,22 @@ export default function Index() {
               Меня зовут<br />
               <span className="gradient-text-2">Анастасия Андреевна</span>
             </h2>
-            <p className="text-foreground/65 leading-relaxed mb-6 font-golos">
-              Я педагог с высшим образованием МГУ и 8-летним опытом работы с учениками от 7 до 18 лет. Специализируюсь на подготовке к ЕГЭ и ОГЭ по математике, физике и точным наукам.
+            <p className="text-foreground/65 leading-relaxed mb-4 font-golos">
+              Репетитор по английскому языку с 20-летним стажем. Разработала авторский ускоренный курс подготовки к ЕГЭ и ОГЭ — мои ученики прекрасно сдают экзамены и поступают именно туда, куда планировали.
+            </p>
+            <p className="text-foreground/65 leading-relaxed mb-4 font-golos">
+              Составляю индивидуальную программу под вашу конкретную цель. В процессе обучения помогаю разговориться и снять языковой барьер, вспомнить забытое, пополнить лексику, структурировать грамматику и лучше понимать речь на слух.
             </p>
             <p className="text-foreground/65 leading-relaxed mb-8 font-golos">
-              Мой подход — найти то, как именно ВАШ ребёнок воспринимает информацию, и выстроить программу под него. Никаких шаблонов — только результат.
+              Лингвист-переводчик английского и немецкого языков (МГОУ им. Черномырдина), преподаватель английского языка (Московский институт лингвистики). Кембриджский сертификат CAE с оценкой A, City&Guilds Expert level — First Class.
             </p>
 
             <div className="grid grid-cols-2 gap-4">
               {[
-                { icon: "GraduationCap", text: "МГУ, педагогический" },
-                { icon: "Medal", text: "8 лет репетиторства" },
-                { icon: "Users", text: "200+ учеников" },
-                { icon: "TrendingUp", text: "Рост оценок с 1 урока" },
+                { icon: "GraduationCap", text: "2 высших образования" },
+                { icon: "Medal", text: "20 лет репетиторства" },
+                { icon: "Award", text: "CAE Cambridge — оценка A" },
+                { icon: "TrendingUp", text: "Авторский курс ЕГЭ/ОГЭ" },
               ].map((item) => (
                 <div key={item.text} className="flex items-center gap-3 p-3 rounded-xl bg-white border border-black/5">
                   <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-orange-100 to-pink-100 flex items-center justify-center flex-shrink-0">
@@ -470,11 +508,15 @@ export default function Index() {
                       onChange={(e) => setFormData(p => ({ ...p, subject: e.target.value }))}
                       className="w-full px-4 py-3 rounded-xl border border-black/10 focus:border-orange-400 focus:ring-2 focus:ring-orange-100 outline-none transition font-golos text-sm bg-white"
                     >
-                      <option value="">Выберите формат</option>
-                      <option>Английский язык — разговорный</option>
-                      <option>Английский язык — грамматика</option>
-                      <option>Подготовка к ЕГЭ</option>
-                      <option>Подготовка к IELTS</option>
+                      <option value="">Выберите направление</option>
+                      <option>IELTS / TOEFL</option>
+                      <option>ЕГЭ по английскому</option>
+                      <option>ОГЭ по английскому</option>
+                      <option>ВПР</option>
+                      <option>Разговорный английский</option>
+                      <option>Английский для малышей</option>
+                      <option>Туристический английский</option>
+                      <option>Успеваемость в школе/университете</option>
                     </select>
                   </div>
 
