@@ -210,9 +210,31 @@ export default function Index() {
             className="blob-2 absolute w-[400px] h-[400px] bottom-0 -left-32 opacity-15"
             style={{ background: "linear-gradient(135deg, #00247D, #1d4ed8)" }}
           />
-          <div className="absolute top-1/3 left-1/2 w-3 h-3 rounded-full bg-red-500 animate-float-slow opacity-60" />
-          <div className="absolute top-1/4 right-1/3 w-2 h-2 rounded-full bg-blue-800 animate-float opacity-50" style={{ animationDelay: "2s" }} />
-          <div className="absolute bottom-1/3 right-1/4 w-4 h-4 rounded-full border-2 border-red-600 animate-float-slow opacity-40" style={{ animationDelay: "1s" }} />
+          {([
+            { top: "33%", left: "50%", right: undefined, bottom: undefined, size: 28, delay: "0s", anim: "animate-float-slow", opacity: 0.55 },
+            { top: "25%", left: undefined, right: "33%", bottom: undefined, size: 22, delay: "2s", anim: "animate-float", opacity: 0.45 },
+            { top: undefined, left: undefined, right: "25%", bottom: "33%", size: 32, delay: "1s", anim: "animate-float-slow", opacity: 0.5 },
+            { top: "60%", left: "20%", right: undefined, bottom: undefined, size: 20, delay: "3s", anim: "animate-float", opacity: 0.4 },
+            { top: "15%", left: "35%", right: undefined, bottom: undefined, size: 18, delay: "1.5s", anim: "animate-float-slow", opacity: 0.35 },
+          ] as { top?: string; left?: string; right?: string; bottom?: string; size: number; delay: string; anim: string; opacity: number }[]).map((f, i) => (
+            <div
+              key={i}
+              className={`absolute ${f.anim} pointer-events-none`}
+              style={{ top: f.top, left: f.left, right: f.right, bottom: f.bottom, animationDelay: f.delay, opacity: f.opacity, width: f.size, height: f.size * 0.6 }}
+            >
+              <svg viewBox="0 0 60 40" xmlns="http://www.w3.org/2000/svg" style={{ width: "100%", height: "100%", filter: "drop-shadow(0 2px 4px rgba(0,0,0,0.15))" }}>
+                <rect width="60" height="40" fill="#00247D" rx="3"/>
+                <line x1="0" y1="0" x2="60" y2="40" stroke="white" strokeWidth="8"/>
+                <line x1="60" y1="0" x2="0" y2="40" stroke="white" strokeWidth="8"/>
+                <line x1="0" y1="0" x2="60" y2="40" stroke="#CF142B" strokeWidth="4"/>
+                <line x1="60" y1="0" x2="0" y2="40" stroke="#CF142B" strokeWidth="4"/>
+                <rect x="24" y="0" width="12" height="40" fill="white"/>
+                <rect x="0" y="14" width="60" height="12" fill="white"/>
+                <rect x="26" y="0" width="8" height="40" fill="#CF142B"/>
+                <rect x="0" y="16" width="60" height="8" fill="#CF142B"/>
+              </svg>
+            </div>
+          ))}
           <svg className="absolute inset-0 w-full h-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
