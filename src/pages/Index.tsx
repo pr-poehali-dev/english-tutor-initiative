@@ -748,8 +748,8 @@ export default function Index() {
               {
                 icon: "Mail",
                 label: "Email",
-                value: "anna@repet.ru",
-                href: "mailto:anna@repet.ru",
+                value: "whimsicalgirl@mail.ru",
+                href: "mailto:whimsicalgirl@mail.ru",
                 color: "from-violet-400 to-purple-600",
               },
             ].map((c) => (
