@@ -277,10 +277,7 @@ export default function Index() {
                 className="relative w-80 h-96 object-cover rounded-3xl shadow-2xl"
                 style={{ objectPosition: "center top" }}
               />
-              <div className="glass absolute -left-8 top-12 px-4 py-3 rounded-2xl shadow-lg animate-float">
-                <div className="text-xs text-foreground/50 font-golos">Следующий урок</div>
-                <div className="font-semibold text-sm mt-0.5">Сегодня в 15:30</div>
-              </div>
+
               <div className="glass absolute -right-8 bottom-16 px-4 py-3 rounded-2xl shadow-lg animate-float" style={{ animationDelay: "1.5s" }}>
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">⭐</span>
