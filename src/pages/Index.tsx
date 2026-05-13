@@ -14,45 +14,10 @@ const NAV_LINKS = [
 
 const SERVICES = [
   {
-    icon: "BookOpen",
-    title: "Математика",
-    desc: "ЕГЭ, ОГЭ и олимпийский уровень. Строим логику с нуля.",
-    color: "from-orange-400 to-pink-500",
-    tag: "Хит",
-  },
-  {
     icon: "Globe",
     title: "Английский язык",
     desc: "Разговорный, грамматика, подготовка к IELTS и ЕГЭ.",
     color: "from-violet-500 to-indigo-500",
-    tag: "",
-  },
-  {
-    icon: "FlaskConical",
-    title: "Физика",
-    desc: "Механика, оптика, электричество — от школы до вуза.",
-    color: "from-cyan-400 to-teal-500",
-    tag: "",
-  },
-  {
-    icon: "Code2",
-    title: "Информатика",
-    desc: "Программирование, алгоритмы, подготовка к ЕГЭ.",
-    color: "from-amber-400 to-orange-500",
-    tag: "Новинка",
-  },
-  {
-    icon: "PenLine",
-    title: "Русский язык",
-    desc: "Сочинение, грамматика, подготовка к ВПР и ОГЭ.",
-    color: "from-rose-400 to-pink-600",
-    tag: "",
-  },
-  {
-    icon: "Microscope",
-    title: "Химия",
-    desc: "Реакции, формулы, задачи — понятно и интересно.",
-    color: "from-emerald-400 to-green-600",
     tag: "",
   },
 ];
@@ -505,13 +470,11 @@ export default function Index() {
                       onChange={(e) => setFormData(p => ({ ...p, subject: e.target.value }))}
                       className="w-full px-4 py-3 rounded-xl border border-black/10 focus:border-orange-400 focus:ring-2 focus:ring-orange-100 outline-none transition font-golos text-sm bg-white"
                     >
-                      <option value="">Выберите предмет</option>
-                      <option>Математика</option>
-                      <option>Физика</option>
-                      <option>Английский язык</option>
-                      <option>Информатика</option>
-                      <option>Русский язык</option>
-                      <option>Химия</option>
+                      <option value="">Выберите формат</option>
+                      <option>Английский язык — разговорный</option>
+                      <option>Английский язык — грамматика</option>
+                      <option>Подготовка к ЕГЭ</option>
+                      <option>Подготовка к IELTS</option>
                     </select>
                   </div>
 
