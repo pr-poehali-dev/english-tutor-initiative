@@ -690,8 +690,8 @@ export default function Index() {
               {
                 icon: "Phone",
                 label: "Телефон",
-                value: "+7 (999) 123-45-67",
-                href: "tel:+79991234567",
+                value: "+7 (903) 019-48-63",
+                href: "tel:+79030194863",
                 color: "from-orange-400 to-pink-500",
               },
               {
