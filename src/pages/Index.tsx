@@ -741,8 +741,8 @@ export default function Index() {
               {
                 icon: "MessageCircle",
                 label: "Telegram",
-                value: "@repetitor_anna",
-                href: "https://t.me/repetitor_anna",
+                value: "@EnglishNekrasovka",
+                href: "https://t.me/EnglishNekrasovka",
                 color: "from-cyan-400 to-blue-500",
               },
               {
