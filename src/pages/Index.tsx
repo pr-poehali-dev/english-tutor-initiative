@@ -14,14 +14,14 @@ const NAV_LINKS = [
 ];
 
 const PRICES = [
-  { title: "Английский язык", price: "1700–2000", note: "индивидуально", color: "from-violet-500 to-indigo-500", hot: false },
-  { title: "ЕГЭ по английскому", price: "1800", note: "60 мин.", color: "from-orange-400 to-pink-500", hot: true },
-  { title: "ОГЭ по английскому", price: "1700", note: "60 мин.", color: "from-orange-400 to-amber-400", hot: false },
-  { title: "Международные экзамены (IELTS, TOEFL)", price: "1800", note: "60 мин.", color: "from-cyan-400 to-blue-500", hot: false },
-  { title: "Английский для младших школьников", price: "1500", note: "60 мин.", color: "from-emerald-400 to-teal-500", hot: false },
-  { title: "Дистанционные занятия для детей", price: "1300", note: "60 мин.", color: "from-violet-400 to-purple-500", hot: false },
-  { title: "Занятия в паре", price: "1700", note: "60 мин. / чел.", color: "from-rose-400 to-pink-500", hot: false },
-  { title: "Групповые занятия", price: "900", note: "60 мин. · группа 3 чел.", color: "from-amber-400 to-orange-400", hot: false },
+  { title: "Английский язык", price: "1700–2000", note: "индивидуально", color: "from-blue-700 to-blue-900", hot: false },
+  { title: "ЕГЭ по английскому", price: "1800", note: "60 мин.", color: "from-red-600 to-red-800", hot: true },
+  { title: "ОГЭ по английскому", price: "1700", note: "60 мин.", color: "from-red-500 to-red-700", hot: false },
+  { title: "Международные экзамены (IELTS, TOEFL)", price: "1800", note: "60 мин.", color: "from-blue-600 to-blue-800", hot: false },
+  { title: "Английский для младших школьников", price: "1500", note: "60 мин.", color: "from-blue-500 to-indigo-700", hot: false },
+  { title: "Дистанционные занятия для детей", price: "1300", note: "60 мин.", color: "from-indigo-600 to-blue-800", hot: false },
+  { title: "Занятия в паре", price: "1700", note: "60 мин. / чел.", color: "from-red-700 to-rose-800", hot: false },
+  { title: "Групповые занятия", price: "900", note: "60 мин. · группа 3 чел.", color: "from-blue-800 to-indigo-900", hot: false },
 ];
 
 const SERVICES = [
@@ -29,42 +29,42 @@ const SERVICES = [
     icon: "FileCheck",
     title: "IELTS и TOEFL",
     desc: "Подготовка к международным экзаменам с нуля до результата.",
-    color: "from-violet-500 to-indigo-500",
+    color: "from-blue-700 to-blue-900",
     tag: "Хит",
   },
   {
     icon: "GraduationCap",
     title: "ЕГЭ, ОГЭ и ВПР",
     desc: "Авторский ускоренный курс — ученики поступают куда планировали.",
-    color: "from-orange-400 to-pink-500",
+    color: "from-red-600 to-red-800",
     tag: "",
   },
   {
     icon: "School",
     title: "Успеваемость в учёбе",
     desc: "Помогу подтянуть школьный или университетский английский.",
-    color: "from-cyan-400 to-teal-500",
+    color: "from-blue-600 to-indigo-700",
     tag: "",
   },
   {
     icon: "MessageCircle",
     title: "Разговорный английский",
     desc: "Снятие языкового барьера, разговорный интенсив, живая речь.",
-    color: "from-emerald-400 to-green-500",
+    color: "from-blue-500 to-blue-700",
     tag: "",
   },
   {
     icon: "Baby",
     title: "Английский для малышей",
     desc: "Игровой формат для детей — первые слова и любовь к языку.",
-    color: "from-amber-400 to-orange-500",
+    color: "from-red-500 to-red-700",
     tag: "",
   },
   {
     icon: "Plane",
     title: "Туристический английский",
     desc: "Минимум за минимальный срок — всё необходимое для поездки.",
-    color: "from-rose-400 to-pink-600",
+    color: "from-red-700 to-blue-800",
     tag: "",
   },
 ];
@@ -204,15 +204,15 @@ export default function Index() {
         <div className="absolute inset-0 pointer-events-none">
           <div
             className="blob absolute w-[600px] h-[600px] -top-32 -right-48 opacity-20"
-            style={{ background: "linear-gradient(135deg, #F7630C, #EC4899)" }}
+            style={{ background: "linear-gradient(135deg, #CF142B, #00247D)" }}
           />
           <div
             className="blob-2 absolute w-[400px] h-[400px] bottom-0 -left-32 opacity-15"
-            style={{ background: "linear-gradient(135deg, #8B5CF6, #06B6D4)" }}
+            style={{ background: "linear-gradient(135deg, #00247D, #1d4ed8)" }}
           />
-          <div className="absolute top-1/3 left-1/2 w-3 h-3 rounded-full bg-amber-400 animate-float-slow opacity-60" />
-          <div className="absolute top-1/4 right-1/3 w-2 h-2 rounded-full bg-violet-500 animate-float opacity-50" style={{ animationDelay: "2s" }} />
-          <div className="absolute bottom-1/3 right-1/4 w-4 h-4 rounded-full border-2 border-orange-400 animate-float-slow opacity-40" style={{ animationDelay: "1s" }} />
+          <div className="absolute top-1/3 left-1/2 w-3 h-3 rounded-full bg-red-500 animate-float-slow opacity-60" />
+          <div className="absolute top-1/4 right-1/3 w-2 h-2 rounded-full bg-blue-800 animate-float opacity-50" style={{ animationDelay: "2s" }} />
+          <div className="absolute bottom-1/3 right-1/4 w-4 h-4 rounded-full border-2 border-red-600 animate-float-slow opacity-40" style={{ animationDelay: "1s" }} />
           <svg className="absolute inset-0 w-full h-full opacity-[0.03]" xmlns="http://www.w3.org/2000/svg">
             <defs>
               <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
@@ -302,7 +302,7 @@ export default function Index() {
 
       {/* ABOUT */}
       <section id="about" className="py-24 relative overflow-hidden">
-        <div className="absolute right-0 top-0 w-72 h-72 blob opacity-10" style={{ background: "linear-gradient(135deg, #8B5CF6, #06B6D4)" }} />
+        <div className="absolute right-0 top-0 w-72 h-72 blob opacity-10" style={{ background: "linear-gradient(135deg, #00247D, #1d4ed8)" }} />
 
         <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-16 items-center">
           <div className="relative">

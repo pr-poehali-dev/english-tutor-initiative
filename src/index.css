@@ -34,12 +34,12 @@
 
     --radius: 1rem;
 
-    /* Custom brand */
-    --brand-orange: #f7630c;
-    --brand-purple: #8b5cf6;
-    --brand-teal: #06b6d4;
-    --brand-pink: #ec4899;
-    --brand-yellow: #fbbf24;
+    /* Custom brand — British flag */
+    --brand-orange: #cf142b;
+    --brand-purple: #00247d;
+    --brand-teal: #1d4ed8;
+    --brand-pink: #cf142b;
+    --brand-yellow: #e2e8f0;
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -213,18 +213,18 @@
   }
 
   .btn-primary {
-    background: linear-gradient(135deg, var(--brand-orange), #ff8a3d);
+    background: linear-gradient(135deg, #cf142b, #a00f21);
     color: white;
     border-radius: 50px;
     font-weight: 600;
     font-family: "Golos Text", sans-serif;
     transition: all 0.3s ease;
-    box-shadow: 0 8px 30px rgba(247, 99, 12, 0.35);
+    box-shadow: 0 8px 30px rgba(207, 20, 43, 0.35);
   }
 
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 40px rgba(247, 99, 12, 0.5);
+    box-shadow: 0 12px 40px rgba(207, 20, 43, 0.5);
   }
 
   .section-title {
