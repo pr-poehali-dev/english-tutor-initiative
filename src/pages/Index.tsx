@@ -264,7 +264,7 @@ export default function Index() {
             </div>
             <h2 className="section-title text-5xl font-bold mb-6 leading-tight">
               Меня зовут<br />
-              <span className="gradient-text-2">Анна Михайлова</span>
+              <span className="gradient-text-2">Анастасия Андреевна</span>
             </h2>
             <p className="text-foreground/65 leading-relaxed mb-6 font-golos">
               Я педагог с высшим образованием МГУ и 8-летним опытом работы с учениками от 7 до 18 лет. Специализируюсь на подготовке к ЕГЭ и ОГЭ по математике, физике и точным наукам.
@@ -622,7 +622,7 @@ export default function Index() {
       <footer className="bg-slate-950 py-8 px-6 text-center">
         <div className="font-cormorant text-2xl font-bold gradient-text mb-2">Знания.</div>
         <p className="text-white/25 text-sm font-golos">
-          © 2024 Анна Михайлова · Репетитор · Все права защищены
+          © 2024 Анастасия Андреевна · Репетитор · Все права защищены
         </p>
       </footer>
     </div>
