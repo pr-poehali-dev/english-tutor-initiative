@@ -71,30 +71,50 @@ const SERVICES = [
 
 const REVIEWS = [
   {
-    name: "Анна К.",
-    role: "Мама ученика, 9 класс",
-    text: "Сын сдал ОГЭ по математике на 5! Ещё полгода назад боялся контрольных. Огромное спасибо за терпение и профессионализм.",
+    name: "Мария",
+    date: "октябрь 2024",
+    service: "Английский язык",
+    text: "Всё отлично. Ребёнку занятия нравятся, занимается больше месяца. Анастасия Андреевна очень приятна в общении, ответственный педагог, подробно сообщает о проделанной работе на уроках.",
     stars: 5,
     avatar: "🌟",
   },
   {
-    name: "Дмитрий Р.",
-    role: "Студент, 11 класс",
-    text: "Готовился к ЕГЭ по физике за 3 месяца. Набрал 87 баллов — поступил в вуз мечты. Метод объяснения просто уникальный!",
-    stars: 5,
-    avatar: "🚀",
-  },
-  {
-    name: "Елена М.",
-    role: "Мама ученицы, 7 класс",
-    text: "Дочка наконец-то полюбила английский. Занятия интересные, домашние задания выполняет с удовольствием.",
+    name: "Инна",
+    date: "февраль 2024",
+    service: "Английский язык",
+    text: "Выражаю огромную благодарность Анастасии Андреевне. Сына увлёк английский, с удовольствием выполняет задания. До этого невозможно было заставить учить уроки. Спасибо большое!",
     stars: 5,
     avatar: "✨",
   },
   {
-    name: "Михаил Д.",
-    role: "Ученик, 10 класс",
-    text: "Сложные задачи по химии теперь не пугают. Объяснения чёткие и логичные. Рекомендую всем!",
+    name: "Марина",
+    date: "февраль 2024",
+    service: "Английский язык",
+    text: "Ребёнку понравился педагог. Всё чётко по делу, честная обратная связь.",
+    stars: 5,
+    avatar: "💛",
+  },
+  {
+    name: "Татьяна Борисова",
+    date: "февраль 2024",
+    service: "Английский язык",
+    text: "Очень хорошая и общительная. Будем работать и дальше. Ребёнок тоже остался доволен.",
+    stars: 5,
+    avatar: "🌸",
+  },
+  {
+    name: "Виктория",
+    date: "март 2023",
+    service: "Английский для дошкольников",
+    text: "Анастасия Андреевна, спасибо за проведённый урок — всё прошло отлично! Будем продолжать занятия с вами.",
+    stars: 5,
+    avatar: "🚀",
+  },
+  {
+    name: "Ярослав",
+    date: "октябрь 2022",
+    service: "Английский язык",
+    text: "Знакомство с педагогом произвело приятное впечатление — полное объяснение всех материалов на занятии, ребёнок доволен, будем продолжать. Спасибо большое!",
     stars: 5,
     avatar: "🎯",
   },
@@ -622,17 +642,35 @@ export default function Index() {
       {/* REVIEWS */}
       <section id="reviews" className="py-24 bg-gradient-to-b from-white to-[#FAFAF8]">
         <div className="max-w-6xl mx-auto px-6">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-rose-50 border border-rose-200 text-rose-500 text-sm font-medium mb-6">
               <Icon name="Heart" size={14} />
               Отзывы учеников
             </div>
-            <h2 className="section-title text-5xl font-bold mb-4">
+            <h2 className="section-title text-5xl font-bold mb-6">
               Что говорят <span className="gradient-text">ученики</span>
             </h2>
-            <p className="text-foreground/55 max-w-xl mx-auto font-golos">
-              Результаты говорят сами за себя — реальные истории успеха
-            </p>
+            <div className="flex items-center justify-center gap-6">
+              <div className="text-center">
+                <div className="font-cormorant text-5xl font-bold gradient-text leading-none">4,8</div>
+                <div className="flex gap-1 justify-center mt-1">
+                  {[1,2,3,4,5].map(i => (
+                    <span key={i} className={i <= 4 ? "text-amber-400" : "text-amber-300"}>★</span>
+                  ))}
+                </div>
+                <div className="text-xs text-foreground/45 font-golos mt-1">средняя оценка</div>
+              </div>
+              <div className="w-px h-12 bg-black/10" />
+              <div className="text-center">
+                <div className="font-cormorant text-5xl font-bold gradient-text leading-none">41</div>
+                <div className="text-xs text-foreground/45 font-golos mt-1">отзыв</div>
+              </div>
+              <div className="w-px h-12 bg-black/10" />
+              <div className="text-center">
+                <div className="font-cormorant text-5xl font-bold gradient-text leading-none">37</div>
+                <div className="text-xs text-foreground/45 font-golos mt-1">оценок «5»</div>
+              </div>
+            </div>
           </div>
 
           <div className="grid md:grid-cols-2 gap-6">
@@ -641,10 +679,16 @@ export default function Index() {
                 <div className="absolute top-4 right-6 font-cormorant text-8xl text-orange-100 font-bold leading-none select-none pointer-events-none">
                   "
                 </div>
-                <div className="flex gap-1 mb-4">
-                  {Array.from({ length: r.stars }).map((_, j) => (
-                    <span key={j} className="text-amber-400 text-lg">★</span>
-                  ))}
+                <div className="flex items-center justify-between mb-3">
+                  <div className="flex gap-1">
+                    {Array.from({ length: r.stars }).map((_, j) => (
+                      <span key={j} className="text-amber-400 text-lg">★</span>
+                    ))}
+                  </div>
+                  <span className="text-xs text-foreground/35 font-golos">{r.date}</span>
+                </div>
+                <div className="text-xs text-violet-500 font-medium font-golos mb-3 bg-violet-50 px-2 py-1 rounded-lg inline-block">
+                  {r.service}
                 </div>
                 <p className="text-foreground/75 leading-relaxed font-golos mb-6 relative z-10">
                   «{r.text}»
@@ -655,7 +699,7 @@ export default function Index() {
                   </div>
                   <div>
                     <div className="font-semibold text-sm">{r.name}</div>
-                    <div className="text-xs text-foreground/45 font-golos">{r.role}</div>
+                    <div className="text-xs text-foreground/45 font-golos">проверенный отзыв</div>
                   </div>
                 </div>
               </div>
