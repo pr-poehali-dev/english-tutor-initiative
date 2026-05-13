@@ -307,9 +307,23 @@ export default function Index() {
             <p className="text-foreground/65 leading-relaxed mb-4 font-golos">
               Составляю индивидуальную программу под вашу конкретную цель. В процессе обучения помогаю разговориться и снять языковой барьер, вспомнить забытое, пополнить лексику, структурировать грамматику и лучше понимать речь на слух.
             </p>
-            <p className="text-foreground/65 leading-relaxed mb-8 font-golos">
-              Лингвист-переводчик английского и немецкого языков (МГОУ им. Черномырдина), преподаватель английского языка (Московский институт лингвистики). Кембриджский сертификат CAE с оценкой A, City&Guilds Expert level — First Class.
-            </p>
+            <div className="flex flex-col gap-3 mb-8">
+              {[
+                { year: "2007–2012", org: "Московский государственный открытый университет", spec: "Лингвист, переводчик" },
+                { year: "до 2014", org: "Московский институт лингвистики", spec: "Преподаватель (учитель) английского языка" },
+                { year: "до 2017", org: "Московская международная академия и издательство «Макмиллан»", spec: "Повышение квалификации: подготовка учащихся к ЕГЭ" },
+              ].map((edu) => (
+                <div key={edu.org} className="flex gap-3 p-3 rounded-xl bg-white border border-black/5">
+                  <div className="flex-shrink-0 px-2 py-1 rounded-lg bg-violet-50 text-violet-600 text-xs font-semibold font-golos whitespace-nowrap h-fit mt-0.5">
+                    {edu.year}
+                  </div>
+                  <div>
+                    <div className="text-sm font-medium leading-snug">{edu.org}</div>
+                    <div className="text-xs text-foreground/50 font-golos mt-0.5">{edu.spec}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
 
             <div className="grid grid-cols-2 gap-4">
               {[
