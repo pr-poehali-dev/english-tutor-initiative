@@ -7,9 +7,21 @@ const NAV_LINKS = [
   { label: "Главная", href: "#home" },
   { label: "О мне", href: "#about" },
   { label: "Услуги", href: "#services" },
+  { label: "Цены", href: "#prices" },
   { label: "Расписание", href: "#schedule" },
   { label: "Отзывы", href: "#reviews" },
   { label: "Контакты", href: "#contacts" },
+];
+
+const PRICES = [
+  { title: "Английский язык", price: "1700–2000", note: "индивидуально", color: "from-violet-500 to-indigo-500", hot: false },
+  { title: "ЕГЭ по английскому", price: "1800", note: "60 мин.", color: "from-orange-400 to-pink-500", hot: true },
+  { title: "ОГЭ по английскому", price: "1700", note: "60 мин.", color: "from-orange-400 to-amber-400", hot: false },
+  { title: "Международные экзамены (IELTS, TOEFL)", price: "1800", note: "60 мин.", color: "from-cyan-400 to-blue-500", hot: false },
+  { title: "Английский для младших школьников", price: "1500", note: "60 мин.", color: "from-emerald-400 to-teal-500", hot: false },
+  { title: "Дистанционные занятия для детей", price: "1300", note: "60 мин.", color: "from-violet-400 to-purple-500", hot: false },
+  { title: "Занятия в паре", price: "1700", note: "60 мин. / чел.", color: "from-rose-400 to-pink-500", hot: false },
+  { title: "Групповые занятия", price: "900", note: "60 мин. · группа 3 чел.", color: "from-amber-400 to-orange-400", hot: false },
 ];
 
 const SERVICES = [
@@ -386,6 +398,60 @@ export default function Index() {
                 </a>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* PRICES */}
+      <section id="prices" className="py-24 bg-gradient-to-b from-white to-[#FAFAF8]">
+        <div className="max-w-6xl mx-auto px-6">
+          <div className="text-center mb-16">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-600 text-sm font-medium mb-6">
+              <Icon name="Wallet" size={14} />
+              Цены
+            </div>
+            <h2 className="section-title text-5xl font-bold mb-4">
+              Стоимость <span className="gradient-text">занятий</span>
+            </h2>
+            <p className="text-foreground/55 max-w-xl mx-auto font-golos">
+              Первое занятие — бесплатная диагностика знаний. Далее индивидуальная программа по фиксированной цене.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+            {PRICES.map((p) => (
+              <div key={p.title} className="card-hover relative bg-white rounded-3xl p-5 border border-black/5 overflow-hidden">
+                <div className={`absolute top-0 left-0 right-0 h-1 rounded-t-3xl bg-gradient-to-r ${p.color}`} />
+                {p.hot && (
+                  <div className="absolute top-4 right-4 px-2 py-0.5 rounded-full text-xs font-semibold bg-orange-100 text-orange-600">
+                    Хит
+                  </div>
+                )}
+                <div className="mt-1 mb-3">
+                  <div className="font-cormorant text-3xl font-bold gradient-text leading-none">
+                    {p.price} <span className="text-xl">₽</span>
+                  </div>
+                  <div className="text-xs text-foreground/45 font-golos mt-1">{p.note}</div>
+                </div>
+                <div className="text-sm font-medium text-foreground/80 font-golos leading-snug">{p.title}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="bg-gradient-to-r from-violet-50 to-cyan-50 rounded-3xl p-6 border border-violet-100 flex flex-col md:flex-row items-center gap-4 justify-between">
+            <div className="flex items-center gap-4">
+              <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-emerald-400 to-teal-500 flex items-center justify-center flex-shrink-0">
+                <Icon name="Gift" size={22} className="text-white" />
+              </div>
+              <div>
+                <div className="font-semibold">Первое занятие — бесплатная диагностика</div>
+                <div className="text-sm text-foreground/55 font-golos">Определим уровень, цель и составим программу</div>
+              </div>
+            </div>
+            <a href="#schedule" className="btn-primary px-6 py-3 text-sm whitespace-nowrap flex items-center gap-2 flex-shrink-0">
+              <Icon name="CalendarCheck" size={16} />
+              Записаться бесплатно
+            </a>
           </div>
         </div>
       </section>
