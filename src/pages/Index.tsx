@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const TUTOR_PHOTO = "https://cdn.poehali.dev/projects/5b72bbdf-4aa5-4256-8212-b4f247a55cbd/files/df5ba0b4-45a6-4a82-a020-944d26a09a3a.jpg";
+const TUTOR_PHOTO = "https://cdn.poehali.dev/projects/5b72bbdf-4aa5-4256-8212-b4f247a55cbd/bucket/f7019797-d937-490c-8ec1-f9439e76f273.jpg";
 
 const NAV_LINKS = [
   { label: "Главная", href: "#home" },
@@ -285,7 +285,7 @@ export default function Index() {
                 <div className="flex items-center gap-2">
                   <span className="text-2xl">⭐</span>
                   <div>
-                    <div className="font-bold text-lg leading-none">4.9</div>
+                    <div className="font-bold text-lg leading-none">5,0</div>
                     <div className="text-xs text-foreground/50 font-golos">рейтинг</div>
                   </div>
                 </div>
@@ -652,10 +652,10 @@ export default function Index() {
             </h2>
             <div className="flex items-center justify-center gap-6">
               <div className="text-center">
-                <div className="font-cormorant text-5xl font-bold gradient-text leading-none">4,8</div>
+                <div className="font-cormorant text-5xl font-bold gradient-text leading-none">5,0</div>
                 <div className="flex gap-1 justify-center mt-1">
                   {[1,2,3,4,5].map(i => (
-                    <span key={i} className={i <= 4 ? "text-amber-400" : "text-amber-300"}>★</span>
+                    <span key={i} className="text-amber-400">★</span>
                   ))}
                 </div>
                 <div className="text-xs text-foreground/45 font-golos mt-1">средняя оценка</div>
