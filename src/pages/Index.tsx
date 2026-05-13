@@ -657,7 +657,40 @@ export default function Index() {
             ))}
           </div>
 
-          <div className="flex justify-center gap-4 mt-12">
+          <div className="grid md:grid-cols-3 gap-4 max-w-3xl mx-auto mt-8">
+            {[
+              {
+                icon: "Home",
+                title: "Приём у себя",
+                desc: "Проспект Защитников Москвы, Москва",
+                color: "from-orange-400 to-pink-500",
+              },
+              {
+                icon: "Monitor",
+                title: "Онлайн",
+                desc: "Занятия дистанционно — из любой точки мира",
+                color: "from-violet-400 to-indigo-500",
+              },
+              {
+                icon: "MapPin",
+                title: "Выезд к ученику",
+                desc: "Москва — уточните район при записи",
+                color: "from-cyan-400 to-teal-500",
+              },
+            ].map((f) => (
+              <div key={f.title} className="glass bg-white/5 rounded-2xl p-5 flex items-start gap-4">
+                <div className={`w-10 h-10 rounded-xl bg-gradient-to-br ${f.color} flex items-center justify-center flex-shrink-0`}>
+                  <Icon name={f.icon} size={18} className="text-white" />
+                </div>
+                <div>
+                  <div className="text-white font-semibold text-sm mb-1">{f.title}</div>
+                  <div className="text-white/50 text-xs font-golos leading-snug">{f.desc}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="flex justify-center gap-4 mt-8">
             {[
               { icon: "Instagram", label: "Instagram" },
               { icon: "Youtube", label: "YouTube" },
