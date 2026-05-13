@@ -255,7 +255,7 @@ export default function Index() {
 
             <div className="flex gap-8 mt-12">
               {[
-                { num: "8+", label: "лет опыта" },
+                { num: "20", label: "лет опыта" },
                 { num: "200+", label: "учеников" },
                 { num: "94%", label: "сдают на 4 и 5" },
               ].map((s) => (
