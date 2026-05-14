@@ -259,7 +259,7 @@ export default function Index() {
             </h1>
 
             <p className="text-lg text-foreground/65 leading-relaxed mb-8 max-w-md font-golos">
-              Индивидуальные занятия с опытным репетитором. Подготовка к ЕГЭ, ОГЭ и олимпиадам. Результат — гарантирован.
+              Репетитор по английскому языку района Некрасовка. Индивидуальные занятия. Подготовка к ЕГЭ, ОГЭ и олимпиадам. Результат — гарантирован.
             </p>
 
             <div className="flex flex-wrap gap-4">
